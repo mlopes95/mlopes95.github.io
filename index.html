@@ -25,7 +25,7 @@
     <meta property="og:type" content="article" />
 
     <!-- Website Title -->
-    <title>Name of APP</title>
+    <title>Bus Twins</title>
 
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
@@ -55,10 +55,10 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
         <!-- Text Logo - Use this if you don't have a graphic logo -->
-        <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Leno</a> -->
+        <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Logo</a> -->
 
         <!-- Image Logo -->
-        <a class="navbar-brand logo-image" href="index.html"><img style="width: 80px;height: 70px;" src="images/bus_logo.png"></a>
+        <a class="navbar-brand logo-image" href="index.html">Bus Twins</a>
         <!--THIS IS LOGO    <img src="images/bus_logo.png" alt="alternative">-->
 
         <!-- Mobile Menu Toggle Button -->
@@ -74,24 +74,23 @@
                     <a class="nav-link page-scroll" href="#header">HOME <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#features">FEATURES</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link page-scroll" href="#preview">PREVIEW</a>
                 </li>
-
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#features">FEATURES</a>
+                </li>
                 <!-- Dropdown Menu -->
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle page-scroll" href="#app_notes" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">APP NOTES</a>
+                    <a class="nav-link dropdown-toggle page-scroll" href="#app_notes" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">DOCUMENTATION</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="documentation.html"><span class="item-text">DOCUMENTATION</span></a>
+                        <a class="dropdown-item" href="documentation.html#concept"><span class="item-text">THE CONCEPT</span></a>
                         <div class="dropdown-items-divide-hr"></div>
-                        <a class="dropdown-item" href="personas.html"><span class="item-text">PERSONAS & SCENARIOS</span></a>
-
+                        <a class="dropdown-item" href="documentation.html#personas"><span class="item-text">PERSONAS & SCENARIOS</span></a>
+                        <div class="dropdown-items-divide-hr"></div>
+                        <a class="dropdown-item" href="documentation.html#architecture"><span class="item-text">ARCHITECTURE</span></a>
                     </div>
                 </li>
                 <!-- end of dropdown menu -->
-
                 <li class="nav-item">
                     <a class="nav-link page-scroll" href="#our-team">OUR TEAM</a>
                 </li>
@@ -108,15 +107,14 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="text-container">
-                            <h1>MOBILE APP <br>FOR <span id="js-rotating">TURISTS, DRIVERS, PEOPLE</span></h1>
-                            <p class="p-large">*Some app information for use*</p>
+                            <h1>DIGITAL TWINS APP <br>FOR <span id="js-rotating">TURISTS, DRIVERS, PEOPLE</span></h1>
                         </div>
                     </div>
                     <!-- end of col -->
                     <div class="col-lg-6">
-                        <!-- <div class="image-container">
-                            <img class="img-fluid" src="images/header-iphone.png" alt="alternative">
-                        </div> -->
+                        <div class="image-container">
+                            <img class="img-fluid" src="images/main_image1.gif" alt="alternative">
+                        </div>
                         <!-- end of image-container -->
                     </div>
                     <!-- end of col -->
@@ -128,7 +126,66 @@
         <!-- end of header-content -->
     </header>
     <!-- end of header -->
-    <!-- end of header -->
+
+    <!-- Preview -->
+    <div id="preview" class="tabs">
+        <div class=" container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>PREVIEW</h2>
+                </div>
+                <!-- end of col -->
+            </div>
+            <!-- end of row -->
+            <div class="row">
+                <div class="col-md-6">
+                    <img style="width: 600px; height: 450px;" src="images/preview_image.png" alt="alternative">
+                </div>
+                <div class="col-md-6 align-self-center">
+                    <p>*Small introduction to app function*</p>
+                </div>
+            </div>
+            <!-- end of row -->
+        </div>
+        <!-- end of container -->
+    </div>
+    <!-- end of preview -->
+
+    <!-- Tools -->
+    <div id="technologies" class="basic-1">
+        <div class=" container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>TOOLS</h2>
+                </div>
+                <!-- end of col -->
+            </div>
+            <!-- end of row -->
+            <div class="row">
+                <div class="col-lg-4 align-self-center">
+                    <img class="img-fluid" src="images/cucumber-black-512.png" alt="alternative">
+                    <img class="img-fluid" src="images/html_logo.gif" alt="alternative">
+
+                </div>
+                <!-- end of col -->
+                <div class="col-lg-4">
+                    <img class="img-fluid" src="images/maven_logo.png" alt="alternative">
+                    <img class="img-fluid" src="images/kafka.gif" alt="alternative">
+
+                </div>
+                <!-- end of col -->
+                <div class="col-lg-4">
+                    <img class="img-fluid" src="images/jenkins_logo.gif" alt="alternative">
+                    <img class="img-fluid" style="width: 260px; height: 180px;" src="images/docker_logo.png" alt="alternative">
+
+                </div>
+                <!-- end of col -->
+            </div>
+            <!-- end of row -->
+        </div>
+        <!-- end of container -->
+    </div>
+    <!-- end of Tools -->
 
     <!-- Features -->
     <div id="features" class="tabs">
@@ -142,9 +199,8 @@
             </div>
             <!-- end of row -->
             <div class="row">
-
                 <!-- Tabs Links -->
-                <ul class="nav nav-tabs" id="lenoTabs" role="tablist">
+                <ul class="nav nav-tabs" id="busTwinTabs" role="tablist">
                     <li class="nav-item">
                         <a class="nav-link active" id="nav-tab-1" data-toggle="tab" href="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true"><i class="fas fa-cog"></i>SYSTEM</a>
                     </li>
@@ -155,58 +211,68 @@
                 <!-- end of tabs links -->
 
                 <!-- Tabs Content-->
-                <div class="tab-content" id="lenoTabsContent">
-
+                <div class="tab-content" id="busTwinTabsContent">
                     <!-- Tab -->
                     <div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="tab-1">
                         <div class="container">
                             <div class="row">
-                                <!-- Image Pane -->
-                                <div class="col-lg-4">
-                                    <img class="img-fluid" src="images/features-iphone-1.png" alt="alternative">
-                                </div>
-                                <!-- end of image pane -->
                                 <!-- Icon Cards Pane -->
-                                <div class="col-lg-4">
-                                    <div class="card right-pane first">
+                                <div class="col-lg-4 align-self-center">
+                                    <div class="card left-pane first">
                                         <div class="card-body">
+                                            <div class="text-wrapper">
+                                                <a class="btn-solid-reg popup-with-move-anim" href="#details-digital-entity-creation">DIGITAL ENTITY CREATION</a>
+                                                <p>Creation of a virtual bus line with the possibility for free disposal of their entities (buses, people, stations)</p>
+                                            </div>
                                             <div class="card-icon">
                                                 <i class="far fa-file-code"></i>
                                             </div>
-                                            <div class="text-wrapper">
-                                                <h4 class="card-title">Digital Entity Creation</h4>
-                                                <p>Creation of a virtual bus line with the possibility for free disposal of their entities (buses, people, stations)</p>
-                                            </div>
                                         </div>
                                     </div>
-                                    <div class="card right-pane">
+                                    <div class="card left-pane">
                                         <div class="card-body">
+                                            <div class="text-wrapper">
+                                                <a class="btn-solid-reg popup-with-move-anim" href="#details-strength">STRENGTH</a>
+                                                <p>Possibility to add multiple instances of the bus network entities (multiple buses, multiple stations, multiple people)</p>
+                                            </div>
                                             <div class="card-icon">
                                                 <i class="fas fa-cube"></i>
                                             </div>
-                                            <div class="text-wrapper">
-                                                <h4 class="card-title">Strength</h4>
-                                                <p>Possibility to add multiple instances of the bus network entities (multiple buses, multiple stations, multiple people)</p>
-                                            </div>
                                         </div>
                                     </div>
+                                </div>
+                                <!-- end of icon cards pane -->
+
+                                <!-- Image Pane -->
+                                <div class="col-lg-4">
+                                    <img class="img-fluid" src="images/buslike_app.png" style="width: 500 px; height:500 px" alt="alternative">
+                                </div>
+                                <!-- end of image pane -->
+
+                                <!-- Icon Cards Pane -->
+                                <div class="col-lg-4 align-self-center">
                                     <div class="card right-pane">
                                         <div class="card-body">
                                             <div class="card-icon">
                                                 <i class="far fa-gem"></i>
                                             </div>
                                             <div class="text-wrapper">
-                                                <h4 class="card-title">Easy Testing</h4>
+                                                <a class="btn-solid-reg popup-with-move-anim" href="#details-testing-lightbox">EASY TESTING</a>
                                                 <p>Possibility to add people, create requests (e.g. check if person X can catch the bus in its location, etc...)</p>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <!-- end of icon cards pane -->
-
-                                <!-- Icon Cards Pane -->
-                                <div class="col-lg-4">
-
+                                    <div class="card right-pane">
+                                        <div class="card-body">
+                                            <div class="card-icon">
+                                                <i class="far fa-compass"></i>
+                                            </div>
+                                            <div class="text-wrapper">
+                                                <a class="btn-solid-reg popup-with-move-anim" href="#details-GPS-assurance-lightbox">GPS ASSURANCE</a>
+                                                <p>GPS locations of buses and stations are used to provide more test assurance</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <!-- end of icon cards pane -->
                             </div>
@@ -214,119 +280,76 @@
                         </div>
                         <!-- end of container -->
                     </div>
-                    <!-- end of tab-pane -->
                     <!-- end of tab -->
 
                     <!-- Tab -->
                     <div class="tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="tab-2">
                         <div class="container">
                             <div class="row">
-
                                 <!-- Text And Icon Cards Area -->
-                                <div class="col-md-8">
-                                    <div class="icon-cards-area">
-                                        <div class="card">
-                                            <div class="card-icon">
-                                                <i class="far fa-calendar-check"></i>
-                                            </div>
-                                            <div class="card-body">
-                                                <h4 class="card-title">Calendar Input</h4>
-                                                <p>Schedule your appointments, meetings and periodical evaluations using the provided in-app calendar option</p>
+                                <div class="col-lg-4 align-self-center">
+                                    <div class="card left-pane first">
+                                        <div class="card-body">
+                                            <div class="text-wrapper">
+                                                <a class="btn-solid-reg popup-with-move-anim" href="#details-changeRoute">CHANGE ROUTE</a>
+                                                <p>Change the bus route and make a new routing test</p>
                                             </div>
                                         </div>
-                                        <div class="card">
-                                            <div class="card-icon">
-                                                <i class="far fa-file-code"></i>
-                                            </div>
-                                            <div class="card-body">
-                                                <h4 class="card-title">Visual Editor</h4>
-                                                <p>Leno provides a well designed and ergonomic visual editor for you to edit your notes and input data</p>
-                                            </div>
-                                        </div>
-                                        <div class="card">
-                                            <div class="card-icon">
-                                                <i class="fas fa-cube"></i>
-                                            </div>
-                                            <div class="card-body">
-                                                <h4 class="card-title">Good Foundation</h4>
-                                                <p>Get a solid foundation for your self development efforts. Try Leno mobile app for any mobile platform</p>
+                                    </div>
+                                    <div class="card left-pane first">
+                                        <div class="card-body">
+                                            <div class="text-wrapper">
+                                                <a class="btn-solid-reg popup-with-move-anim" href="#details-bestRoute">BEST ROUTE</a>
+                                                <p>Check out wich bus has the shortest route to reach you</p>
                                             </div>
                                         </div>
-                                        <div class="card">
-                                            <div class="card-icon">
-                                                <i class="far fa-bookmark"></i>
+                                    </div>
+                                </div>
+
+                                <!-- Image Pane -->
+                                <div class="col-lg-4">
+                                    <img class="img-fluid" src="images/busroute.png" alt="alternative">
+                                </div>
+                                <!-- end of image pane -->
+
+                                <div class="col-lg-4">
+                                    <div class="card right-pane">
+                                        <div class="card-body">
+                                            <div class="text-wrapper">
+                                                <a class="btn-solid-reg popup-with-move-anim" href="#details-notify">NOTIFICATIONS</a>
+                                                <p>You will be notified when a bus is passing through a bus station</p>
                                             </div>
-                                            <div class="card-body">
-                                                <h4 class="card-title">Easy Reading</h4>
-                                                <p>Reading focus mode for long form articles, ebooks and other materials which involve large text areas</p>
+                                        </div>
+                                    </div>
+                                    <div class="card right-pane">
+                                        <div class="card-body">
+                                            <div class="text-wrapper">
+                                                <a class="btn-solid-reg popup-with-move-anim" href="#details-waitingTime">WAITING TIME</a>
+                                                <p>Find out how long the next bus takes to arrive</p>
                                             </div>
                                         </div>
                                     </div>
                                     <!-- end of icon cards area -->
-
-                                    <div class="text-area">
-                                        <h3>Monitoring Tools Evaluation</h3>
-                                        <p>Monitor the evolution of your finances and health state using tools integrated in Leno. The generated real time reports can be filtered based on any <a class="turquoise" href="#your-link">desired criteria</a>.</p>
-                                    </div>
-                                    <!-- end of text-area -->
                                 </div>
-                                <!-- end of col-md-8 -->
+                                <!-- end of col -->
                                 <!-- end of text and icon cards area -->
-
-                                <!-- Image Pane -->
-                                <div class="col-md-4">
-                                    <img class="img-fluid" src="images/features-iphone-3.png" alt="alternative">
-                                </div>
-                                <!-- end of image pane -->
                             </div>
                             <!-- end of row -->
                         </div>
                         <!-- end of container -->
                     </div>
-                    <!-- end of tab-pane -->
                     <!-- end of tab -->
                 </div>
-                <!-- end of tab-content -->
                 <!-- end of tabs content -->
             </div>
             <!-- end of row -->
         </div>
         <!-- end of container -->
     </div>
-    <!-- end of tabs -->
     <!-- end of features -->
 
-    <!-- Video -->
-    <div id="preview" class="basic-1">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2>PREVIEW</h2>
-                    <div class="p-heading p-large">*Some information*</div>
-                </div>
-
-                <!-- end of col -->
-            </div>
-            <!-- end of row -->
-            <div class="row">
-                <div class="col-lg-12">
-
-                    <a class="btn-solid-reg popup-with-move-anim" href="#details-lightbox-1">LIGHTBOX</a>
-
-                    <!-- end of image-container -->
-                    <!-- end of video preview -->
-                </div>
-                <!-- end of col -->
-            </div>
-            <!-- end of row -->
-        </div>
-        <!-- end of container -->
-    </div>
-    <!-- end of basic-1 -->
-    <!-- end of video -->
-
-    <!-- Details 1 -->
-    <div id="app_notes" class="basic-2">
+    <!-- Documentation -->
+    <div id="app_notes" class="basic-4">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
@@ -336,7 +359,7 @@
                 <div class="col-lg-6">
                     <div class="text-container">
                         <h3>Documentation</h3>
-                        <p>You can check out the concept behind the theme on our project documentation and a small overview!</p>
+                        <p>You can check out the concept behind the theme on our project documentation, scenarios and system architecture!</p>
                         <a class="btn-solid-lg" href="documentation.html">SEE MORE</a>
                     </div>
                     <!-- end of text-container -->
@@ -347,184 +370,171 @@
         </div>
         <!-- end of container -->
     </div>
-    <!-- end of basic-2 -->
-    <!-- end of details 1 -->
+    <!-- end of Documentation -->
 
-    <!-- Details 2 -->
-    <div class="basic-3">
-        <div class="second">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="text-container">
-                            <h3>Personas & Scenarios</h3>
-                            <p>We like to know our audience and wich cases can our app be helpfull.</p>
-                            <a class="btn-solid-lg" href="personas.html">SEE MORE</a>
-                        </div>
-                        <!-- end of text-container -->
-                    </div>
-                    <!-- end of col -->
-                    <div class="col-lg-6">
-                        <img class="img-fluid" src="images/personas_dev3.gif" alt="alternative">
-                    </div>
-                    <!-- end of col -->
-                </div>
-                <!-- end of row -->
-            </div>
-            <!-- end of container -->
-        </div>
-        <!-- end of second -->
-    </div>
-    <!-- end of basic-3 -->
-    <!-- end of details 2 -->
-
-    <!-- Details Lightboxes -->
     <!-- Lightbox -->
-    <div id="details-lightbox-1" class="lightbox-basic zoom-anim-dialog mfp-hide">
+    <div id="details-digital-entity-creation" class="lightbox-basic zoom-anim-dialog mfp-hide">
         <div class="row">
             <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
             <div class="col-lg-6">
-                <img class="img-fluid" src="images/details-lightbox-1.png" alt="alternative">
+                <img class="img-fluid" src="images/entitycreation.jpg" alt="alternative">
             </div>
             <div class="col-lg-6">
-                <h3>Goals Setting</h3>
+                <h3>Digital Entity Creation</h3>
                 <hr>
-                <p>Leno can easily help you track your personal development evolution if you take the time to set it up.</p>
-                <h4>User Feedback</h4>
-                <p>This is a great app which can help you save time and make your live easier. And it will help improve your productivity levels.</p>
-                <p>You should definitely give it a try when you need a good app.</p>
-                <table>
-                    <tr>
-                        <td class="icon-cell"><i class="fas fa-desktop"></i></td>
-                        <td>Responsive layout</td>
-                    </tr>
-                    <tr>
-                        <td class="icon-cell"><i class="fas fa-bullhorn"></i></td>
-                        <td>Distinctive CTAs</td>
-                    </tr>
-                    <tr>
-                        <td class="icon-cell"><i class="fas fa-image"></i></td>
-                        <td>Image gallery slider</td>
-                    </tr>
-                    <tr>
-                        <td class="icon-cell"><i class="fas fa-envelope"></i></td>
-                        <td>Contact forms</td>
-                    </tr>
-                    <tr>
-                        <td class="icon-cell"><i class="fab fa-font-awesome-flag"></i></td>
-                        <td>FontAwesome icons</td>
-                    </tr>
-                    <tr>
-                        <td class="icon-cell"><i class="fas fa-code"></i></td>
-                        <td>Well-structured code</td>
-                    </tr>
-                </table>
-                <a class="btn-solid-reg" href="#feature.html">DETAILS</a> <a class="btn-outline-reg mfp-close as-button" href="#features">BACK</a>
+                <p>Creation of a virtual bus line with the possibility for free disposal of their entities (buses, people, stations)</p>
+                <a class="btn-outline-reg mfp-close as-button">BACK</a>
             </div>
         </div>
         <!-- end of row -->
     </div>
-    <!-- end of lightbox-basic -->
-    <!-- end of lightbox -->
+    <!-- end of Lightbox -->
 
     <!-- Lightbox -->
-    <div id="details-lightbox-2" class="lightbox-basic zoom-anim-dialog mfp-hide">
+    <div id="details-strength" class="lightbox-basic zoom-anim-dialog mfp-hide">
         <div class="row">
             <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
             <div class="col-lg-6">
-                <img class="img-fluid" src="images/details-lightbox-2.png" alt="alternative">
+                <img class="img-fluid" src="images/strength.jpg" alt="alternative">
             </div>
             <div class="col-lg-6">
-                <h3>Calendar Input</h3>
+                <h3>Strength</h3>
                 <hr>
-                <p>The calendar input function enables the user to setup training, meditation and relaxation sessions with ease.</p>
-                <h4>User Feedback</h4>
-                <p>This is a great app which can help you save time and make your live easier. And it will help improve your productivity levels.</p>
-                <p>You should definitely give it a try when you need a good app.</p>
-                <table>
-                    <tr>
-                        <td class="icon-cell"><i class="fas fa-desktop"></i></td>
-                        <td>Responsive layout</td>
-                    </tr>
-                    <tr>
-                        <td class="icon-cell"><i class="fas fa-bullhorn"></i></td>
-                        <td>Distinctive CTAs</td>
-                    </tr>
-                    <tr>
-                        <td class="icon-cell"><i class="fas fa-image"></i></td>
-                        <td>Image gallery slider</td>
-                    </tr>
-                    <tr>
-                        <td class="icon-cell"><i class="fas fa-envelope"></i></td>
-                        <td>Contact forms</td>
-                    </tr>
-                    <tr>
-                        <td class="icon-cell"><i class="fab fa-font-awesome-flag"></i></td>
-                        <td>FontAwesome icons</td>
-                    </tr>
-                    <tr>
-                        <td class="icon-cell"><i class="fas fa-code"></i></td>
-                        <td>Well-structured code</td>
-                    </tr>
-                </table>
-                <a class="btn-solid-reg" href="#your-link">DETAILS</a> <a class="btn-outline-reg mfp-close as-button" href="#features">BACK</a>
+                <p>Possibility to add multiple instances of the bus network entities (multiple buses, multiple stations, multiple people)</p>
+                <a class="btn-outline-reg mfp-close as-button">BACK</a>
             </div>
         </div>
         <!-- end of row -->
     </div>
-    <!-- end of lightbox-basic -->
-    <!-- end of lightbox -->
-    <!-- end of details lightboxes -->
+    <!-- end of Lightbox -->
 
-    <!-- Download -->
-    <div class="basic-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-xl-5">
-                    <div class="text-container">
-                        <h2>Download</h2>
-                        <p class="p-large">*In case of use</p>
-                    </div>
-                    <!-- end of text-container -->
-                </div>
-                <!-- end of col -->
-                <div class="col-lg-6 col-xl-7">
-                    <!-- <div class="image-container">
-                        <img class="img-fluid" src="images/download.png" alt="alternative">
-                    </div> -->
-                    <!-- end of img-container -->
-                </div>
-                <!-- end of col -->
+    <!-- Lightbox -->
+    <div id="details-testing-lightbox" class="lightbox-basic zoom-anim-dialog mfp-hide">
+        <div class="row">
+            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+            <div class="col-lg-6">
+                <img class="img-fluid" src="images/testing.jpg" alt="alternative">
             </div>
-            <!-- end of row -->
+            <div class="col-lg-6">
+                <h3>Easy Testing</h3>
+                <hr>
+                <p>Possibility to add people, create requests (e.g. check if person X can catch the bus in its location, etc...)</p>
+                <a class="btn-outline-reg mfp-close as-button">BACK</a>
+            </div>
         </div>
-        <!-- end of container -->
+        <!-- end of row -->
     </div>
-    <!-- end of basic-4 -->
-    <!-- end of download -->
+    <!-- end of Lightbox -->
+
+    <!-- Lightbox -->
+    <div id="details-GPS-assurance-lightbox" class="lightbox-basic zoom-anim-dialog mfp-hide">
+        <div class="row">
+            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+            <div class="col-lg-6">
+                <img class="img-fluid" src="images/gps.jpg" alt="alternative">
+            </div>
+            <div class="col-lg-6">
+                <h3>GPS Assurance</h3>
+                <hr>
+                <p>GPS locations of buses and stations are used to provide more test assurance</p>
+                <a class="btn-outline-reg mfp-close as-button">BACK</a>
+            </div>
+        </div>
+        <!-- end of row -->
+    </div>
+    <!-- end of Lightbox -->
+
+    <!-- Lightbox -->
+    <div id="details-changeRoute" class="lightbox-basic zoom-anim-dialog mfp-hide">
+        <div class="row">
+            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+            <div class="col-lg-6">
+                <img class="img-fluid" src="images/routes.png" alt="alternative">
+            </div>
+            <div class="col-lg-6">
+                <h3>Change Route</h3>
+                <hr>
+                <p>A bus route can be changed, just choose a bus that is already crated and redefine a new route for it. The app will display the newly updated route.</p>
+                <a class="btn-outline-reg mfp-close as-button">BACK</a>
+            </div>
+        </div>
+        <!-- end of row -->
+    </div>
+    <!-- end of Lightbox -->
+
+    <!-- Lightbox -->
+    <div id="details-bestRoute" class="lightbox-basic zoom-anim-dialog mfp-hide">
+        <div class="row">
+            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+            <div class="col-lg-6">
+                <img class="img-fluid" src="images/bestRoute.jpg" alt="alternative">
+            </div>
+            <div class="col-lg-6">
+                <h3>Best Route</h3>
+                <hr>
+                <p>Check the buses that stops at your station and choose wich is quicker to arrive to you or wichever suits your schedule.</p>
+                <a class="btn-outline-reg mfp-close as-button">BACK</a>
+            </div>
+        </div>
+        <!-- end of row -->
+    </div>
+    <!-- end of Lightbox -->
+
+    <!-- Lightbox -->
+    <div id="details-notify" class="lightbox-basic zoom-anim-dialog mfp-hide">
+        <div class="row">
+            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+            <div class="col-lg-6">
+                <img class="img-fluid" src="images/notifications.png" alt="alternative">
+            </div>
+            <div class="col-lg-6">
+                <h3>Notifications</h3>
+                <hr>
+                <p>Get notified when the bus stops in a station before the station where you are! It notifies you the time that the bus takes to arrive to your station.</p>
+                <a class="btn-outline-reg mfp-close as-button">BACK</a>
+            </div>
+        </div>
+        <!-- end of row -->
+    </div>
+    <!-- end of Lightbox -->
+
+    <!-- Lightbox -->
+    <div id="details-waitingTime" class="lightbox-basic zoom-anim-dialog mfp-hide">
+        <div class="row">
+            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+            <div class="col-lg-6">
+                <img class="img-fluid" src="images/waitingTime.jpg" alt="alternative">
+            </div>
+            <div class="col-lg-6">
+                <h3>Waiting Time</h3>
+                <hr>
+                <p>You can know how much time the next bus takes to arrive to your station, just write the station name where you are and the app will tell you how much time is left to the bus arrive.</p>
+                <a class="btn-outline-reg mfp-close as-button">BACK</a>
+            </div>
+        </div>
+        <!-- end of row -->
+    </div>
+    <!-- end of lightbox -->
 
     <!-- Testimonials -->
     <div id="our-team" class="slider-1">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-
                     <!-- Card Slider -->
                     <div class="slider-container">
                         <div class="swiper-container card-slider">
                             <div class="swiper-wrapper">
-
                                 <!-- Slide -->
                                 <div class="swiper-slide">
                                     <div class="card">
                                         <img class="card-image" src="images/oscar.png" alt="alternative">
                                         <div class="card-body">
-                                            <p class="testimonial-text">"I have a dream."</p>
+                                            <p class="testimonial-text">"Talk is cheap, show me the code."</p>
                                             <p class="testimonial-author">Oscar Pimentel - Developer</p>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- end of swiper-slide -->
                                 <!-- end of slide -->
 
                                 <!-- Slide -->
@@ -532,12 +542,11 @@
                                     <div class="card">
                                         <img class="card-image" src="images/ricardo.png" alt="alternative">
                                         <div class="card-body">
-                                            <p class="testimonial-text">"Shake that"</p>
+                                            <p class="testimonial-text">"User interface is like a joke. If you have to explain it, it's not that good."</p>
                                             <p class="testimonial-author">Ricardo Pombeiro - Web Developer</p>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- end of swiper-slide -->
                                 <!-- end of slide -->
 
                                 <!-- Slide -->
@@ -545,67 +554,60 @@
                                     <div class="card">
                                         <img class="card-image" src="images/miguel.png" alt="alternative">
                                         <div class="card-body">
-                                            <p class="testimonial-text">"Cucumber"</p>
+                                            <p class="testimonial-text">"There is no place like 127.0.0.1."</p>
                                             <p class="testimonial-author">Miguel Lopes - Developer</p>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- end of swiper-slide -->
                                 <!-- end of slide -->
 
                                 <!-- Slide -->
                                 <div class="swiper-slide">
                                     <div class="card">
-                                        <img class="card-image" src="images/sergio.png" alternative ">
-                                        <div class="card-body ">
-                                            <p class="testimonial-text ">"We could do this "</p>
-                                            <p class="testimonial-author ">Sergio - Developer</p>
+                                        <img class="card-image" src="images/sergio.png" alt="alternative">
+                                        <div class="card-body">
+                                            <p class="testimonial-text">"There are only two kinds of languages: the ones people complain about and the ones nobody uses."</p>
+                                            <p class="testimonial-author">Sergio - Developer</p>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- end of swiper-slide -->
                                 <!-- end of slide -->
 
                                 <!-- Slide -->
-                                <div class="swiper-slide ">
-                                    <div class="card ">
-                                        <img class="card-image " src="images/tiago.png " alt="alternative ">
-                                        <div class="card-body ">
-                                            <p class="testimonial-text ">"Tell me about "</p>
-                                            <p class="testimonial-author ">Tiago Fonseca - Web Developer</p>
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <img class="card-image" src="images/tiago.png" alt="alternative">
+                                        <div class="card-body">
+                                            <p class="testimonial-text">"Code can't lie. Comments can."</p>
+                                            <p class="testimonial-author">Tiago Fonseca - Web Developer</p>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- end of swiper-slide -->
                                 <!-- end of slide -->
 
                                 <!-- Slide -->
-                                <div class="swiper-slide ">
-                                    <div class="card ">
-                                        <img class="card-image " src="images/andre.png " alt="alternative ">
-                                        <div class="card-body ">
-                                            <p class="testimonial-text ">"Yes we can "</p>
-                                            <p class="testimonial-author ">André Marques - Developer</p>
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <img class="card-image" src="images/andre.png" alt="alternative">
+                                        <div class="card-body">
+                                            <p class="testimonial-text">"Programmer, an organism that turns caffeine into software."</p>
+                                            <p class="testimonial-author">André Marques - Developer</p>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- end of swiper-slide -->
                                 <!-- end of slide -->
-
                             </div>
                             <!-- end of swiper-wrapper -->
 
                             <!-- Add Arrows -->
-                            <div class="swiper-button-next "></div>
-                            <div class="swiper-button-prev "></div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
                             <!-- end of add arrows -->
 
                         </div>
                         <!-- end of swiper-container -->
                     </div>
-                    <!-- end of slider-container -->
                     <!-- end of card slider -->
-
                 </div>
                 <!-- end of col -->
             </div>
@@ -613,28 +615,28 @@
         </div>
         <!-- end of container -->
     </div>
-    <!-- end of slider-1 -->
     <!-- end of testimonials -->
 
-    <!-- Footer -->
-    <div class="footer ">
-        <div class="row ">
-            <div class="col-lg-4 "></div>
-            <div class="col-lg-4 ">
-                <div class="image-container ">
-                    <img class="center " class="middle " style="width: 450px; height: 100px; " src="images/ua_deti_logo.png " alt="alternative ">
+    <!-- Footer UA -->
+    <div class="footer">
+        <div class="row">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-4">
+                <div class="image-container">
+                    <img class="center" class="middle" style="width: 450px; height: 100px;" src="images/ua_deti_logo.png" alt="alternative">
                 </div>
             </div>
-            <div class="col-lg-4 "></div>
+            <div class="col-lg-4"></div>
         </div>
     </div>
+    <!-- end of Footer UA -->
 
     <!-- Copyright -->
-    <div class="copyright ">
-        <div class="container ">
-            <div class="row ">
-                <div class="col-lg-12 ">
-                    <p class="p-small ">© App Name 2020. All rights reserved</p>
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="p-small">© App Name 2020. All rights reserved</p>
                 </div>
                 <!-- end of col -->
             </div>
@@ -643,28 +645,26 @@
         <!-- end of container -->
     </div>
     <!-- end of copyright -->
-    <!-- end of copyright -->
-
 
     <!-- Scripts -->
-    <script src="js/jquery.min.js "></script>
+    <script src="js/jquery.min.js"></script>
     <!-- jQuery for Bootstrap's JavaScript plugins -->
-                                        <script src="js/popper.min.js "></script>
-                                        <!-- Popper tooltip library for Bootstrap -->
-                                        <script src="js/bootstrap.min.js "></script>
-                                        <!-- Bootstrap framework -->
-                                        <script src="js/jquery.easing.min.js "></script>
-                                        <!-- jQuery Easing for smooth scrolling between anchors -->
-                                        <script src="js/swiper.min.js "></script>
-                                        <!-- Swiper for image and text sliders -->
-                                        <script src="js/jquery.magnific-popup.js "></script>
-                                        <!-- Magnific Popup for lightboxes -->
-                                        <script src="js/morphext.min.js "></script>
-                                        <!-- Morphtext rotating text in the header -->
-                                        <script src="js/validator.min.js "></script>
-                                        <!-- Validator.js - Bootstrap plugin that validates forms -->
-                                        <script src="js/scripts.js "></script>
-                                        <!-- Custom scripts -->
+    <script src="js/popper.min.js"></script>
+    <!-- Popper tooltip library for Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Bootstrap framework -->
+    <script src="js/jquery.easing.min.js"></script>
+    <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="js/swiper.min.js"></script>
+    <!-- Swiper for image and text sliders -->
+    <script src="js/jquery.magnific-popup.js"></script>
+    <!-- Magnific Popup for lightboxes -->
+    <script src="js/morphext.min.js"></script>
+    <!-- Morphtext rotating text in the header -->
+    <script src="js/validator.min.js"></script>
+    <!-- Validator.js - Bootstrap plugin that validates forms -->
+    <script src="js/scripts.js"></script>
+    <!-- Custom scripts -->
 </body>
 
 </html>

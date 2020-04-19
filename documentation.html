@@ -25,7 +25,7 @@
     <meta property="og:type" content="article" />
 
     <!-- Website Title -->
-    <title>Documentation - APP name</title>
+    <title>Documentation - Bus Twins</title>
 
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
@@ -56,10 +56,10 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
         <!-- Text Logo - Use this if you don't have a graphic logo -->
-        <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Leno</a> -->
+        <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Logo</a> -->
 
         <!-- Image Logo -->
-        <a class="navbar-brand logo-image" href="index.html"><img style="width: 80px;height: 70px;" src="images/bus_logo.png"></a>
+        <a class="navbar-brand logo-image" href="index.html">BUS TWINS</a>
 
         <!-- Mobile Menu Toggle Button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -74,19 +74,21 @@
                     <a class="nav-link page-scroll" href="index.html#header">HOME <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="index.html#features">FEATURES</a>
+                    <a class="nav-link page-scroll" href="index.html#preview">PREVIEW</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="index.html#preview">PREVIEW</a>
+                    <a class="nav-link page-scroll" href="index.html#features">FEATURES</a>
                 </li>
 
                 <!-- Dropdown Menu -->
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle page-scroll" href="index.html#app_notes" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">APP NOTES</a>
+                    <a class="nav-link dropdown-toggle page-scroll" href="index.html#app_notes" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">DOCUMENTATION</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="documentation.html"><span class="item-text">DOCUMENTATION</span></a>
+                        <a class="dropdown-item page-scroll" href="#concept"><span class="item-text">THE CONCEPT</span></a>
                         <div class="dropdown-items-divide-hr"></div>
-                        <a class="dropdown-item" href="personas.html"><span class="item-text">PERSONAS & SCENARIOS</span></a>
+                        <a class="dropdown-item page-scroll" href="#personas"><span class="item-text">PERSONAS & SCENARIOS</span></a>
+                        <div class="dropdown-items-divide-hr"></div>
+                        <a class="dropdown-item page-scroll" href="#architecture"><span class="item-text">ARCHITECTURE</span></a>
                     </div>
                 </li>
                 <!-- end of dropdown menu -->
@@ -94,8 +96,6 @@
         </div>
     </nav>
     <!-- end of navbar -->
-    <!-- end of navbar -->
-
 
     <!-- Header -->
     <header id="header" class="ex-header">
@@ -110,9 +110,7 @@
         </div>
         <!-- end of container -->
     </header>
-    <!-- end of ex-header -->
     <!-- end of header -->
-
 
     <!-- Breadcrumbs -->
     <div class="ex-basic-1">
@@ -133,9 +131,8 @@
     <!-- end of ex-basic-1 -->
     <!-- end of breadcrumbs -->
 
-
-    <!-- Terms Content -->
-    <div class="ex-basic-2">
+    <!-- The concept -->
+    <div id="concept" class="ex-basic-2">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 offset-lg-1">
@@ -182,22 +179,240 @@
                                 <div class="media-body">To be discussed: Possibility to add people and buses characteristics that may affect the natural network usage (bus oil capacity or bus speed, blind people need more time to get into the bus, and this may result in a bus
                                     delay to reach the station where a person is requesting a bus…)</div>
                             </li>
-
                         </ul>
                     </div>
                     <!-- end of text-container -->
-
-                    <a class="btn-outline-reg back" href="index.html">BACK</a>
-
                 </div>
+                <!-- end of col -->
             </div>
             <!-- end of row -->
         </div>
         <!-- end of container -->
     </div>
-    <!-- end of ex-basic -->
-    <!-- end of terms content -->
+    <!-- end of the concept -->
 
+    <!-- Personas & Scenarios -->
+    <div id="personas" class="ex-basic-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="text-container">
+                        <h3>Belmiro Azevedo</h3>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <img class="img-fluid" src="images/persona1_1.png" alt="alternative">
+                            </div>
+                            <!-- end of col -->
+                            <div class="col-lg-6">
+                                <div class="text-container">
+                                    <h3>Profile</h3>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <ul class="list-unstyled li-space-lg indent">
+                                                <li class="media">
+                                                    <i class="fas fa-square"></i>
+                                                    <div class="media-body">Belmiro de Jesus Azevedo</div>
+                                                </li>
+                                                <li class="media">
+                                                    <i class="fas fa-square"></i>
+                                                    <div class="media-body">59 years old</div>
+                                                </li>
+                                                <li class="media">
+                                                    <i class="fas fa-square"></i>
+                                                    <div class="media-body">Lives in Porto</div>
+                                                </li>
+                                                <li class="media">
+                                                    <i class="fas fa-square"></i>
+                                                    <div class="media-body">Degree in Management (Faculdade de Economia do Porto)</div>
+                                                </li>
+                                                <li class="media">
+                                                    <i class="fas fa-square"></i>
+                                                    <div class="media-body">CEO of a public transport company in Porto</div>
+                                                </li>
+                                                <li class="media">
+                                                    <i class="fas fa-square"></i>
+                                                    <div class="media-body">Owner of a Port Wine company</div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!-- end of col -->
+                                    </div>
+                                    <!-- end of row -->
+                                </div>
+                                <!-- end of text-container -->
+                            </div>
+                            <!-- end of col -->
+                        </div>
+                        <!-- end of row -->
+
+                        <p></p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3>Life Style</h3>
+                                <p>He is a very busy man and has a very active lifestyle because, in addition to his intense work as a businessman, he holds an administrative position at Leixões Sport Club's SAD, the club where his father played. Every weekend,
+                                    he goes to the stadium to watch his club's game. Despite his age, he is a man focused on new technologies and, being conservative, he always seeks to optimize costs in all aspects of his life. He was successful in the
+                                    wine industry, being a pioneer in the use of sensors to automatically register the quality of wine in barrels. He has a peculiar taste for wines and has a collection of very valuable old bottles.
+                                </p>
+                            </div>
+                            <!-- end of col -->
+                            <div class="col-md-6">
+                                <h3>Goal</h3>
+                                <p>Bearing in mind the great success he had incorporating technology in the wine industry, and seeking to satisfy the need to create an optimized bus network for downtown Porto, Belmiro is working with the City Council. He
+                                    needs to deploy a network that can satisfy the needs of the dense downtown population (local and tourist), and he cannot perform many physical experiments with buses and real people, so as not to condition tourism in
+                                    that area. Thus, Belmiro needs to use the system to create virtual models of the bus network to simulate the behavior and persistence of said network and distribute the stations in order to optimize their routes.
+                                </p>
+                            </div>
+                            <!-- end of col -->
+                        </div>
+                        <!-- end of row -->
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <h3>Scenario 1</h3>
+                                <p><span style="color: rgb(2, 219, 2); font-size: medium;"><b>Feature: </b></span>Create digital twins from the elements of a bus line.</p>
+                                <p><span style="color: rgb(2, 219, 2); font-size: medium;"><b>Given: </b></span>Belmiro wants to test a bus line idea and he accesses the emulation section.</p>
+                                <p><span style="color: rgb(2, 219, 2); font-size: medium;"><b>When: </b></span>He creates 1 virtual bus and defines its route.</p>
+                                <p><span style="color: rgb(2, 219, 2); font-size: medium;"><b>Then: </b></span>The app must spawn the bus and show how it performs from the departure station to the arrival station.</p>
+                            </div>
+                            <!-- end of col -->
+                            <div class="col-lg-4">
+                                <h3>Scenario 2</h3>
+                                <p><span style="color: rgb(2, 219, 2); font-size: medium;"><b>Feature: </b></span>Create a virtual persona to test the bus network.</p>
+                                <p><span style="color: rgb(2, 219, 2); font-size: medium;"><b>Given: </b></span>Belmiro needs to create virtual personas to test the bus line.</p>
+                                <p><span style="color: rgb(2, 219, 2); font-size: medium;"><b>When: </b></span>He accesses the digital persona creation section and he creates a virtual person with name, age, background learning skills and request that will
+                                    be used in a virtual bus line test.</p>
+                                <p><span style="color: rgb(2, 219, 2); font-size: medium;"><b>Then: </b></span>The app must generate the digital person and confirm its creation.</p>
+                            </div>
+                            <!-- end of col -->
+                            <div class="col-lg-4">
+                                <h3>Scenario 3</h3>
+                                <p><span style="color: rgb(2, 219, 2); font-size: medium;"><b>Feature: </b></span>Change a bus route.</p>
+                                <p><span style="color: rgb(2, 219, 2); font-size: medium;"><b>Given: </b></span>Belmiro needs to change the route of bus number 1 to make a new test.</p>
+                                <p><span style="color: rgb(2, 219, 2); font-size: medium;"><b>When: </b></span>He accesses the already created bus, taps on it and redefines a new route.</p>
+                                <p><span style="color: rgb(2, 219, 2); font-size: medium;"><b>Then: </b></span>The app must change the bus number 1’s route and display the newly updated route.</p>
+                            </div>
+                            <!-- end of col -->
+                        </div>
+                        <!-- end of row -->
+                    </div>
+                    <!-- end of text-container-->
+
+                    <div class="text-container">
+                        <h3>Paula Vasconcelos</h3>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <img class="img-fluid" src="images/persona2.jpg" alt="alternative">
+                            </div>
+                            <!-- end of col -->
+                            <div class="col-lg-6">
+                                <div class="text-container">
+                                    <h3>Profile</h3>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <ul class="list-unstyled li-space-lg indent">
+                                                <li class="media">
+                                                    <i class="fas fa-square"></i>
+                                                    <div class="media-body">Paula Alexandra Martins Vasconcelos</div>
+                                                </li>
+                                                <li class="media">
+                                                    <i class="fas fa-square"></i>
+                                                    <div class="media-body">24 years old</div>
+                                                </li>
+                                                <li class="media">
+                                                    <i class="fas fa-square"></i>
+                                                    <div class="media-body">Lives in Porto</div>
+                                                </li>
+                                                <li class="media">
+                                                    <i class="fas fa-square"></i>
+                                                    <div class="media-body">Degree in Basic Education (Universidade de Aveiro)</div>
+                                                </li>
+                                                <li class="media">
+                                                    <i class="fas fa-square"></i>
+                                                    <div class="media-body">School teacher in Porto</div>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                        <!-- end of col -->
+                                    </div>
+                                    <!-- end of row -->
+                                </div>
+                                <!-- end of text-container -->
+                            </div>
+                            <!-- end of col -->
+                        </div>
+                        <!-- end of row -->
+
+                        <p></p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3>Life Style</h3>
+                                <p>Her lifestyle is very hurried. Every day she has to travel by bus to the school where she teaches, since she lives slightly far away, and she wants to save on gas and avoid the city's chaotic traffic. She teaches from 9am
+                                    to 4pm during the week, and then takes the bus again to go to the gym, to keep her fitness. She is a modern girl, attentive to fashion and fitness trends, and loves social networks.
+                                </p>
+                            </div>
+                            <!-- end of col -->
+                            <div class="col-md-6">
+                                <h3>Goal</h3>
+                                <p>Every day, Paula uses the bus as a means of transport for the most diverse reasons: going to school, going to the gym, returning home, or going shopping. As she is constantly in a hurry, she always wants the bus to have
+                                    the most direct route possible and would like to be able to assess what are the best routes for each station.
+                                </p>
+                            </div>
+                            <!-- end of col -->
+                        </div>
+                        <!-- end of row -->
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <h3>Scenario 1</h3>
+                                <p><span style="color: rgb(2, 219, 2); font-size: medium;"><b>Feature: </b></span>Notifications about bus passing.</p>
+                                <p><span style="color: rgb(2, 219, 2); font-size: medium;"><b>Given: </b></span>Paula, is at the Aliados bus station waiting for a bus.</p>
+                                <p><span style="color: rgb(2, 219, 2); font-size: medium;"><b>When: </b></span>The bus stops by the station before the station she is.</p>
+                                <p><span style="color: rgb(2, 219, 2); font-size: medium;"><b>Then: </b></span>The app must send a notification to Paula that her bus is coming in 4 minutes.</p>
+                            </div>
+                            <!-- end of col -->
+                            <div class="col-lg-4">
+                                <h3>Scenario 2</h3>
+                                <p><span style="color: rgb(2, 219, 2); font-size: medium;"><b>Feature: </b></span>Find out how long the next bus takes to arrive.</p>
+                                <p><span style="color: rgb(2, 219, 2); font-size: medium;"><b>Given: </b></span>Paula, is at the Arrabida bus station waiting for a bus.</p>
+                                <p><span style="color: rgb(2, 219, 2); font-size: medium;"><b>When: </b></span>She writes the station name where she is.</p>
+                                <p><span style="color: rgb(2, 219, 2); font-size: medium;"><b>Then: </b></span>The app must tell her how much time the next bus takes to arrive.</p>
+                            </div>
+                            <!-- end of col -->
+                            <div class="col-lg-4">
+                                <h3>Scenario 3</h3>
+                                <p><span style="color: rgb(2, 219, 2); font-size: medium;"><b>Feature: </b></span>Find out the best bus route.</p>
+                                <p><span style="color: rgb(2, 219, 2); font-size: medium;"><b>Given: </b></span>Paula, is at the Arrabida bus station waiting for a bus and wants to travel to Aliados.</p>
+                                <p><span style="color: rgb(2, 219, 2); font-size: medium;"><b>When: </b></span>She checks the buses that stop by her station.</p>
+                                <p><span style="color: rgb(2, 219, 2); font-size: medium;"><b>Then: </b></span>The app must show her that the bus that has the shortest route to her destination is bus number 2.</p>
+                            </div>
+                            <!-- end of col -->
+                        </div>
+                        <!-- end of row -->
+                    </div>
+                    <!-- end of text-container -->
+                </div>
+                <!-- end of col -->
+            </div>
+            <!-- end of row -->
+        </div>
+        <!-- end of container -->
+    </div>
+    <!-- end of Personas & Scenarios -->
+
+    <!-- Architexture -->
+    <div id="architecture" class="ex-basic-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    <p>*Architecture*</p>
+                    <a class="btn-outline-reg back" href="index.html">BACK</a>
+                </div>
+                <!-- end of col -->
+            </div>
+            <!-- end of row -->
+        </div>
+        <!-- end of container -->
+    </div>
+    <!-- end of Architecture -->
 
     <!-- Breadcrumbs -->
     <div class="ex-basic-1">
@@ -215,10 +430,9 @@
         </div>
         <!-- end of container -->
     </div>
-    <!-- end of ex-basic-1 -->
     <!-- end of breadcrumbs -->
 
-    <!-- Footer -->
+    <!-- Footer UA-->
     <div class="footer">
         <div class="row">
             <div class="col-lg-4"></div>
@@ -230,13 +444,14 @@
             <div class="col-lg-4"></div>
         </div>
     </div>
+    <!-- end of Footer UA -->
 
     <!-- Copyright -->
     <div class="copyright">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <p class="p-small">© App Name 2020. All rights reserved</p>
+                    <p class="p-small">© Bus Twins 2020. All rights reserved</p>
                 </div>
                 <!-- end of col -->
             </div>
@@ -245,8 +460,6 @@
         <!-- end of container -->
     </div>
     <!-- end of copyright -->
-    <!-- end of copyright -->
-
 
     <!-- Scripts -->
     <script src="js/jquery.min.js"></script>
