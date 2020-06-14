@@ -454,6 +454,25 @@
     </div>
     <!-- end of Architecture -->
 
+    <div id="test&acceptance" class="ex-basic-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    <h3>Test&Acceptance</h3>
+                    <div class="text-container">
+                        <p>Cucumber tests were planned to be done, taking the basis of the Gherkin scenarios that were written. Furthermore, the cucumber test file for the Average Speed microservice (StepDefinitions.java) alongside the .feature files were created. Some of these tests were not fulfilled and the ones that were appear commented because they were not system independent.</p>
+
+                        <p>Then one Integration test was designed for the Average speed microservice, leaving the other microservices to be more tested in future improvements.
+                        The implemented test aims to create a bus and find if it was effectively created, as the code below shows.</p>
+                    </div>
+                </div>
+                <!-- end of col -->
+            </div>
+            <!-- end of row -->
+        </div>
+        <!-- end of container -->
+    </div>
+
     <div id="devarea" class="ex-basic-2">
         <div class="container">
             <div class="row">
@@ -528,17 +547,6 @@
                             <li>The topic esp41-bus-routes must be created previously on the Kafka broker before the application deployment.</li>
                             <li>If the developer wants to see the logs via Kibana, he needs to edit the field <url>your_ip</url> in the file “logback.xml” so that the indexes can be created automatically in his own elasticsearch service. Therefore, he can see the following indexes esp41-logs-average-speed, esp41-logs-location-history, esp41-logs-location-rt and esp41-logs-bus-routes.</li>
                         </ul>
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-
-
                         <p>The system can be expanded by creating and adding more microservices for whatever data the developer may find useful. If the developer wants to create a new microservice he must follow the following steps:</p>
                         <ul>
                             <li>Create a new folder in the root directory for the new microservice;</li>
