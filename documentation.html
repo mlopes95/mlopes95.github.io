@@ -84,19 +84,19 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle page-scroll" href="index.html#app_notes" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">DOCUMENTATION</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#concept"><span class="item-text">THE CONCEPT</span></a>
+                        <a class="dropdown-item page-scroll" href="#concept"><span class="item-text">THE CONCEPT</span></a>
                         <div class="dropdown-items-divide-hr"></div>
-                        <a class="dropdown-item" href="#vision"><span class="item-text">VISION</span></a>
+                        <a class="dropdown-item page-scroll" href="#vision"><span class="item-text">VISION</span></a>
                         <div class="dropdown-items-divide-hr"></div>
-                        <a class="dropdown-item" href="#personas"><span class="item-text">PERSONAS & SCENARIOS</span></a>
+                        <a class="dropdown-item page-scroll" href="#personas"><span class="item-text">PERSONAS & SCENARIOS</span></a>
                         <div class="dropdown-items-divide-hr"></div>
-                        <a class="dropdown-item" href="#architecture"><span class="item-text">ARCHITECTURE</span></a>
+                        <a class="dropdown-item page-scroll" href="#architecture"><span class="item-text">ARCHITECTURE</span></a>
                         <div class="dropdown-items-divide-hr"></div>
-                        <a class="dropdown-item" href="#test&acceptance"><span class="item-text">TEST & ACCEPTANCE</span></a>
+                        <a class="dropdown-item page-scroll" href="#test&acceptance"><span class="item-text">TEST & ACCEPTANCE</span></a>
                         <div class="dropdown-items-divide-hr"></div>
-                        <a class="dropdown-item" href="#devarea"><span class="item-text">DEVELOPER AREA</span></a>
+                        <a class="dropdown-item page-scroll" href="#devarea"><span class="item-text">DEVELOPER AREA</span></a>
                         <div class="dropdown-items-divide-hr"></div>
-                        <a class="dropdown-item" href="#usermanual"><span class="item-text">USER MANUAL</span></a>
+                        <a class="dropdown-item page-scroll" href="#usermanual"><span class="item-text">USER MANUAL</span></a>
                     </div>
                 </li>
                 <!-- end of dropdown menu -->
@@ -203,17 +203,18 @@
     <!-- end of the concept -->
 
     <!-- Vision -->
-        <div id="vision" class="ex-basic-2">
+    <div id="vision" class="ex-basic-2">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 offset-lg-1">
                     <h3>Vision</h3>
                     <div class="text-container">
                         <p>The potential of creating digital twins from buses is huge. The variety of the system’s possible features makes it usable in many perspectives.</p>
-                            <p>In our case, the ability to create virtual buses and routes for them makes bus network efficiency testers work much more faster and reliable than experimenting with real buses. </p> 
-                            <p>On the other hand, the variety of content provided from all the system’s microservices makes it useful in a daily routine context of people who travel a lot by bus in a city. The system provides the buses’ positions, routes and the final outcome on helping people checking the bus routes and warning them about the buses on each station is one of the system’s goals.</p>
-                            <p>Therefore, the group found ideal to establish some scenarios about the potential system usage and personas to incarnate the ideal end users of the system.
-                            </p>
+                        <p>In our case, the ability to create virtual buses and routes for them makes bus network efficiency testers work much more faster and reliable than experimenting with real buses. </p>
+                        <p>On the other hand, the variety of content provided from all the system’s microservices makes it useful in a daily routine context of people who travel a lot by bus in a city. The system provides the buses’ positions, routes and
+                            the final outcome on helping people checking the bus routes and warning them about the buses on each station is one of the system’s goals.</p>
+                        <p>Therefore, the group found ideal to establish some scenarios about the potential system usage and personas to incarnate the ideal end users of the system.
+                        </p>
                     </div>
                     <!-- end of text-container -->
                 </div>
@@ -437,10 +438,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 offset-lg-1">
-                     <h3>Architecture</h3>
-                    <img class="img-fluid" style="margin-left: 100px;" src="images/architecture.png" alt="alternative">
-                    <p></p>
-                    <a class="btn-outline-reg back" href="index.html">BACK</a>
+                    <h3>Architecture</h3>
+                    <img class="img-fluid" src="images/diagramaES.png" alt="alternative">
                 </div>
                 <!-- end of col -->
             </div>
@@ -457,32 +456,35 @@
                 <div class="col-lg-10 offset-lg-1">
                     <h3>User Manual</h3>
                     <div class="text-container">
-                    <p>In order to deploy the system, the user must meet some requirements, having the following software installed:</p>
-                    <ul>
-                        <li>Docker;</li>
-                        <li>Jenkins;</li>
-                        <li>Registry;</li>
-                        <li>Kafka;</li>
-                        <li>Elastic Search (only if the user wants to check the logs for monitoring purposes);</li>
-                        <li>Kibana (only if the user wants to check the logs for monitoring purposes);</li>
-                    </ul>
+                        <p>In order to deploy the system, the user must meet some requirements, having the following software installed:</p>
+                        <ul>
+                            <li>Docker;</li>
+                            <li>Jenkins;</li>
+                            <li>Registry;</li>
+                            <li>Kafka;</li>
+                            <li>Elastic Search (only if the user wants to check the logs for monitoring purposes);</li>
+                            <li>Kibana (only if the user wants to check the logs for monitoring purposes);</li>
+                        </ul>
 
 
-                    <p>Assuming the user has already installed the above software, he needs to access the Jenkins web interface and create a github pipeline with the project repository link.</p>
+                        <p>Assuming the user has already installed the above software, he needs to access the Jenkins web interface and create a github pipeline with the project repository link.</p>
 
-                    <p>In case the user wants to check the system logs, he can access the index “esp41-*”. By using the * wildcard, it shows the user all the system logs at once.</p>
+                        <p>In case the user wants to check the system logs, he can access the index “esp41-*”. By using the * wildcard, it shows the user all the system logs at once.</p>
 
-                    <p>In order to use the system, the user must access the following link:</p>
+                        <p>In order to use the system, the user must access the following link:</p>
 
-                    <ul>
-                        <li> http://&ltmachine-ip&gt:41080/buses, where &ltmachine-ip&gt is the IP address of the machine where the user has deployed the project.</li>
-                    </ul>    
-                    <p>Inside the dashboard, the user is granted by its simple design, providing an easy navigation throughout buttons. The main page shows the table with all the data coming from the project’s microservices and then the user can click a button to redirect to an interactive map displaying all the created buses.</p>
-                    <p>If the user wants to create a new bus and a route for the new bus, he needs to access the Rest API that allows access to these features.</p>
-                    <p>For instance, if the user wants to add a location for a bus, he must access /bus-route/add-bus-location/{ID}&{busID}&{locationID}&{lon}&{lat}&{speed}.</p>
-                    <p>In order to create a route, the user must create more than one location for that same bus.</p>
+                        <ul>
+                            <li> http://&ltmachine-ip&gt:41080/buses, where &ltmachine-ip&gt is the IP address of the machine where the user has deployed the project.</li>
+                        </ul>
+                        <p>Inside the dashboard, the user is granted by its simple design, providing an easy navigation throughout buttons. The main page shows the table with all the data coming from the project’s microservices and then the user can click
+                            a button to redirect to an interactive map displaying all the created buses.</p>
+                        <p>If the user wants to create a new bus and a route for the new bus, he needs to access the Rest API that allows access to these features.</p>
+                        <p>For instance, if the user wants to add a location for a bus, he must access /bus-route/add-bus-location/{ID}&{busID}&{locationID}&{lon}&{lat}&{speed}.</p>
+                        <p>In order to create a route, the user must create more than one location for that same bus.</p>
                     </div>
                     <!-- end of text-container -->
+                    <p></p>
+                    <a class="btn-outline-reg back" href="index.html">BACK</a>
                 </div>
                 <!-- end of col -->
             </div>
