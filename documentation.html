@@ -149,7 +149,7 @@
                 <div class="col-lg-10 offset-lg-1">
                     <div class="text-container">
                         <h3>The concept behind the theme</h3>
-                        <p>Have you ever heard about the concept of digital twin? Basically, a digital twin is a digital replica of an entity. There may be virtual counterparts of people, places, devices or systems. The digital twins concept emphazises the
+                        <p>Have you ever heard about the concept of digital twin? Basically, a digital twin is a digital replica of an entity. There may be virtual counterparts of people, places, devices or systems. The digital twins concept emphasizes the
                             connection between the physical model and its virtual counterpart. In a world full of technology, the digital twin concept is used in several areas, such as IoT, AI and software analytics/development. The idea is to create
                             digital simulation models that change as their physical counterparts change.</p>
                         <p>Our group decided to take on the usage of a digital twin to help a system development and testing. A system on its own may be a very complex entity and, as time goes by, it needs to be tested in order to correct possible faults
@@ -165,7 +165,6 @@
                             the routes’ trajectories, station locations or number of people allowed per bus in order to have the best optimized routes that satisfy the constant population needs. Testing the bus network with digital twins will allow the
                             enterprise to save on physical resources and budget as well as making the testing process really quick with no needs to ask people to try real buses and stations, since people can be emulated and their requests for buses emulated
                             as well.</p>
-                        <p>The idea is still being developed by the group.</p>
                     </div>
                     <!-- end of text-container -->
 
@@ -440,6 +439,114 @@
                 <div class="col-lg-10 offset-lg-1">
                     <h3>Architecture</h3>
                     <img class="img-fluid" src="images/diagramaES.png" alt="alternative">
+
+                    <div class="text-container">
+                        <p>The information available on the dataset is used by the Bus-Producer microservice that communicates it to the other microservices via Kafka broker.</p>
+                        <p>Each of the microservices send information to the front-end so that the end users can check the bus locations, bus average speed, etc…</p>
+                        <p>If a user wants to add a new bus or a new route, he can connect to the Bus Routes microservice via a RESTful API and he can also access every other microservices’ available data via that same RESTful API.</p>
+                    </div>
+                </div>
+                <!-- end of col -->
+            </div>
+            <!-- end of row -->
+        </div>
+        <!-- end of container -->
+    </div>
+    <!-- end of Architecture -->
+
+    <div id="devarea" class="ex-basic-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    <h3>Developer Area</h3>
+                    <div class="text-container">
+                        <p>The system development followed a modular approach in order to keep everything simple, converting the features previously discussed into independent and interchangeable microservices. Each one of the microservices contains everything necessary to execute only one functionality. This way, each module can be tested and run individually by the developer, if so is desired.</p>
+
+                        <p>The system consists on 6 microservices. One of them was coded in Python and the remaining 5 using Java Springboot.</p>
+                        <ul>
+                            <li>Bus-producer</li>
+                            <ul>
+                                <li>Technologies used: Python, ApacheKafka</li>
+                                <li>Feature: This microservice’s purpose is to send bus data, from a given dataset, to all other microservices, using a Kafka Producer.</li>
+                                <li>Running on: a Docker container named esp41-digital-twins-bus-producer, on port 41005.</li>
+                            </ul>
+                        </ul>
+
+                        <ul>
+                            <li> Average-speed</li>
+                            <ul>
+                                <li> Technologies used: Java (Springboot), ApacheKafka, MySQL</li>
+                                <li>Feature: This microservice’s purpose is to calculate a given bus’s average speed by accessing its data in the local database. This data is available through a REST API.</li>
+                                <li> Running on: a Docker container named esp41-digital-twins-average-speed, on port 41001</li>
+                            </ul>
+                        </ul>
+ 
+                         <ul>
+                            <li> Bus-routes</li>
+                            <ul>
+                                <li>Technologies used: Java (Springboot), ApacheKafka, MySQL</li>
+                                <li>Feature: This microservice’s purpose is to check all of a bus’s locations and return its route, as well as convey information regarding new locations to other microservices using a kafka producer. This information is available through a REST API.</li>
+                                <li>Running on:  a Docker container named esp41-digital-twins-bus-routes, on port 41002</li>
+                            </ul>
+                        </ul>
+
+                        <ul>
+                            <li>Location-history</li>
+                            <ul>
+                                <li> Technologies used: Java (Springboot), ApacheKafka, MySQL</li>
+                                <li>Feature: This microservice’s purpose is to store and display a given bus’s location history. The information is available through a REST API.</li>
+                                <li>Running on: a Docker container named esp41-digital-twins-location-history, on port 41003</li>
+                            </ul>
+                        </ul>
+
+                         <ul>
+                            <li>Locations-rt (real time)</li>
+                            <ul>
+                                <li>Technologies used: Java (Springboot), ApacheKafka, MySQL</li>
+                                <li>Feature: This microservice’s purpose is to update the local database’s information regarding a bus’s last position (current one). This information is available through a REST API.</li>
+                                <li>Running on: a Docker container named esp41-digital-twins-location-rt, on port 41004</li>
+                            </ul>
+                        </ul>
+
+                         <ul>
+                            <li>Frontend</li>
+                            <ul>
+                                <li>Technologies used: Java (Springboot), ApacheKafka, MySQL</li>
+                                <li>Feature:</li>
+                                <li>Running on: a Docker container named esp41-digital-twins-frontend, on port 41080</li>
+                            </ul>
+                        </ul>
+
+                        <ul>
+                            <li>On the root directory it is found one folder for each one of the microservices.</li>
+                            <li>Following the “/src/main/java” path of a Java microservice, the developer can find the java classes and work on them. In case the developer wants to create some more tests, he can access the “/src/test/java” path in the average-speed microservice folder to find the test files. There’s also the .feature files in the “/resources” path for cucumber tests.</li>
+                            <li>In case of the Python microservice, the BusProducer.py file is found within its folder as well as the bussource.csv file containing the data of the buses.</li>
+                            <li>The Dockerfiles directory contains all the Dockerfiles in order to build a docker image for each one of the microservices.</li>
+                            <li>The frontend microservice has the same requisites as all other java microservices</li>
+                            <li>The system assumes that there’s a MySQL database running on port 3307 with the credentials root/password. If the developer wants to change the database, he can access the applications.properties file and change it.</li>
+                            <li>The system tries to start a connection with a Kafka broker on port 9093 because the system needs to be prepared to receive information from the bus-producer at any time.</li>
+                            <li>The topic esp41-bus-routes must be created previously on the Kafka broker before the application deployment.</li>
+                            <li>If the developer wants to see the logs via Kibana, he needs to edit the field <url>your_ip</url> in the file “logback.xml” so that the indexes can be created automatically in his own elasticsearch service. Therefore, he can see the following indexes esp41-logs-average-speed, esp41-logs-location-history, esp41-logs-location-rt and esp41-logs-bus-routes.</li>
+                        </ul>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+
+
+                        <p>The system can be expanded by creating and adding more microservices for whatever data the developer may find useful. If the developer wants to create a new microservice he must follow the following steps:</p>
+                        <ul>
+                            <li>Create a new folder in the root directory for the new microservice;</li>
+                            <li>Create a new Dockerfile for the new microservice;</li>
+                            <li> Add the configuration to the jenkins file to deploy;</li>
+                            <li>Add the new microservice to the docker-compose-deploy.yml;</li>
+                        </ul>
+                    </div>
                 </div>
                 <!-- end of col -->
             </div>
@@ -479,7 +586,8 @@
                         <p>Inside the dashboard, the user is granted by its simple design, providing an easy navigation throughout buttons. The main page shows the table with all the data coming from the project’s microservices and then the user can click
                             a button to redirect to an interactive map displaying all the created buses.</p>
                         <p>If the user wants to create a new bus and a route for the new bus, he needs to access the Rest API that allows access to these features.</p>
-                        <p>For instance, if the user wants to add a location for a bus, he must access /bus-route/add-bus-location/{ID}&{busID}&{locationID}&{lon}&{lat}&{speed}.</p>
+                        <p>For instance, if the user wants to add a location for a bus, he must access the bus-route microservice as shown below: http://&ltmachine-ip&gt:41002/bus-route/add-bus-location/{ID}&{busID}&{locationID}&{lon}&{lat}&{speed}.</p>
+                        <p>E.g.: http://&ltmachine-ip&gt:41002/bus-route/add-bus-location/1000&testbus&1&34.5&23.2&20</p>
                         <p>In order to create a route, the user must create more than one location for that same bus.</p>
                     </div>
                     <!-- end of text-container -->
