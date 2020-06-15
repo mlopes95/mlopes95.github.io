@@ -74,6 +74,9 @@
                     <a class="nav-link page-scroll" href="index.html#header">HOME <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link page-scroll" href="index.html#preview">PREVIEW</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link page-scroll" href="index.html#features">FEATURES</a>
                 </li>
 
@@ -438,9 +441,9 @@
                 <div class="col-lg-10 offset-lg-1">
                     <h3>Architecture</h3>
                     <img class="img-fluid" src="images/diagramaES.png" alt="alternative">
-			<br>
-			<br>
-			<br>
+                    <br>
+                    <br>
+                    <br>
                     <div class="text-container">
                         <p>The information available on the dataset is used by the Bus-Producer microservice that communicates it to the other microservices via Kafka broker.</p>
                         <p>Each of the microservices send information to the front-end so that the end users can check the bus locations, bus average speed, etc…</p>
@@ -461,15 +464,16 @@
                 <div class="col-lg-10 offset-lg-1">
                     <h3>Test&Acceptance</h3>
                     <div class="text-container">
-                        <p>Cucumber tests were planned to be done, taking the basis of the Gherkin scenarios that were written. Furthermore, the cucumber test file for the Average Speed microservice (StepDefinitions.java) alongside the .feature files were created. Some of these tests were not fulfilled and the ones that were appear commented because they were not system independent.</p>
+                        <p>Cucumber tests were planned to be done, taking the basis of the Gherkin scenarios that were written. Furthermore, the cucumber test file for the Average Speed microservice (StepDefinitions.java) alongside the .feature files were
+                            created. Some of these tests were not fulfilled and the ones that were appear commented because they were not system independent.</p>
 
-                        <p>Then one Integration test was designed for the Average speed microservice, leaving the other microservices to be more tested in future improvements.
-                        The implemented test aims to create a bus and find if it was effectively created, as the code below shows.</p>
+                        <p>Then one Integration test was designed for the Average speed microservice, leaving the other microservices to be more tested in future improvements. The implemented test aims to create a bus and find if it was effectively created,
+                            as the code below shows.</p>
 
-                    	<img class="img-fluid" src="images/testes.png" alt="alternative">
+                        <img class="img-fluid" src="images/testes.png" alt="alternative">
 
                     </div>
-                   
+
                 </div>
                 <!-- end of col -->
             </div>
@@ -488,7 +492,8 @@
                         <br>
                         <br>
                         <br>
-                        <p>The system development followed a modular approach in order to keep everything simple, converting the features previously discussed into independent and interchangeable microservices. Each one of the microservices contains everything necessary to execute only one functionality. This way, each module can be tested and run individually by the developer, if so is desired.</p>
+                        <p>The system development followed a modular approach in order to keep everything simple, converting the features previously discussed into independent and interchangeable microservices. Each one of the microservices contains everything
+                            necessary to execute only one functionality. This way, each module can be tested and run individually by the developer, if so is desired.</p>
 
                         <p>The system consists on 6 microservices. One of them was coded in Python and the remaining 5 using Java Springboot.</p>
                         <ul>
@@ -508,13 +513,14 @@
                                 <li> Running on: a Docker container named esp41-digital-twins-average-speed, on port 41001</li>
                             </ul>
                         </ul>
- 
-                         <ul>
+
+                        <ul>
                             <li> Bus-routes</li>
                             <ul>
                                 <li>Technologies used: Java (Springboot), ApacheKafka, MySQL</li>
-                                <li>Feature: This microservice’s purpose is to check all of a bus’s locations and return its route, as well as convey information regarding new locations to other microservices using a kafka producer. This information is available through a REST API.</li>
-                                <li>Running on:  a Docker container named esp41-digital-twins-bus-routes, on port 41002</li>
+                                <li>Feature: This microservice’s purpose is to check all of a bus’s locations and return its route, as well as convey information regarding new locations to other microservices using a kafka producer. This information is available
+                                    through a REST API.</li>
+                                <li>Running on: a Docker container named esp41-digital-twins-bus-routes, on port 41002</li>
                             </ul>
                         </ul>
 
@@ -527,7 +533,7 @@
                             </ul>
                         </ul>
 
-                         <ul>
+                        <ul>
                             <li>Locations-rt (real time)</li>
                             <ul>
                                 <li>Technologies used: Java (Springboot), ApacheKafka, MySQL</li>
@@ -536,7 +542,7 @@
                             </ul>
                         </ul>
 
-                         <ul>
+                        <ul>
                             <li>Frontend</li>
                             <ul>
                                 <li>Technologies used: Java (Springboot), ApacheKafka, MySQL</li>
@@ -547,14 +553,17 @@
 
                         <ul>
                             <li>On the root directory it is found one folder for each one of the microservices.</li>
-                            <li>Following the “/src/main/java” path of a Java microservice, the developer can find the java classes and work on them. In case the developer wants to create some more tests, he can access the “/src/test/java” path in the average-speed microservice folder to find the test files. There’s also the .feature files in the “/resources” path for cucumber tests.</li>
+                            <li>Following the “/src/main/java” path of a Java microservice, the developer can find the java classes and work on them. In case the developer wants to create some more tests, he can access the “/src/test/java” path in the average-speed
+                                microservice folder to find the test files. There’s also the .feature files in the “/resources” path for cucumber tests.</li>
                             <li>In case of the Python microservice, the BusProducer.py file is found within its folder as well as the bussource.csv file containing the data of the buses.</li>
                             <li>The Dockerfiles directory contains all the Dockerfiles in order to build a docker image for each one of the microservices.</li>
                             <li>The frontend microservice has the same requisites as all other java microservices</li>
                             <li>The system assumes that there’s a MySQL database running on port 3307 with the credentials root/password. If the developer wants to change the database, he can access the applications.properties file and change it.</li>
                             <li>The system tries to start a connection with a Kafka broker on port 9093 because the system needs to be prepared to receive information from the bus-producer at any time.</li>
                             <li>The topic esp41-bus-routes must be created previously on the Kafka broker before the application deployment.</li>
-                            <li>If the developer wants to see the logs via Kibana, he needs to edit the field <url>your_ip</url> in the file “logback.xml” so that the indexes can be created automatically in his own elasticsearch service. Therefore, he can see the following indexes esp41-logs-average-speed, esp41-logs-location-history, esp41-logs-location-rt and esp41-logs-bus-routes.</li>
+                            <li>If the developer wants to see the logs via Kibana, he needs to edit the field
+                                <url>your_ip</url> in the file “logback.xml” so that the indexes can be created automatically in his own elasticsearch service. Therefore, he can see the following indexes esp41-logs-average-speed, esp41-logs-location-history,
+                                esp41-logs-location-rt and esp41-logs-bus-routes.</li>
                         </ul>
                         <p>The system can be expanded by creating and adding more microservices for whatever data the developer may find useful. If the developer wants to create a new microservice he must follow the following steps:</p>
                         <ul>
@@ -608,8 +617,6 @@
                         <p>In order to create a route, the user must create more than one location for that same bus.</p>
                     </div>
                     <!-- end of text-container -->
-                    <p></p>
-                    <a class="btn-outline-reg back" href="index.html">BACK</a>
                 </div>
                 <!-- end of col -->
             </div>
@@ -617,7 +624,7 @@
         </div>
         <!-- end of container -->
     </div>
-    
+
     <div id="improve" class="ex-basic-2">
         <div class="container">
             <div class="row">
@@ -625,7 +632,8 @@
                     <h3>Difficulties & Improvements</h3>
                     <div class="text-container">
                         <p>The team found out the machine’s memory usage a serious constraint and a constant variable that kept being an issue over the course of the project.</p>
-			<p>As some possible future improvements, the team finds interesting to implement all the remaining scenarios (not all of them were implemented, specially in the Paula’s side, having 				an app sending notifications, etc...) and to implement more individual tests on more microservices.</p> 
+                        <p>As some possible future improvements, the team finds interesting to implement all the remaining scenarios (not all of them were implemented, specially in the Paula’s side, having an app sending notifications, etc...) and to implement
+                            more individual tests on more microservices.</p>
                     </div>
                     <!-- end of text-container -->
                     <p></p>
